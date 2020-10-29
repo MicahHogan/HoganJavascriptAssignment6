@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!-- This program prompts the user to input the test scores for four students-->
+<!-- The test scores are summed and the total and average test scores are displayed-->
+<!-- on the webpage after the user has inputted all four test scores-->
+<html>
+	<head>
+		<title>Assignment 6</title>
+	</head>
+	
+	<body>
+		<h1>To calculate the total scores of all students<br>
+			<br>and the average test score for the class</h1>
+		<script language="JavaScript">
+			alert("Please provide the test score for each student to calculate the average test score for the class");
+			var testTotal = 0;
+			var testAvg = 0;
+			var studentTotal = 0;
+			/* for loop iterates through numbers one through four
+				and performs operations within for loop in each
+				iteration.*/
+			for (iterator = 1; iterator < 5; iterator++) {
+				/*ParseInt is used in user input prompt
+				for test score to avoid variable being stored
+				as string and causing math errors */
+				var testScore = parseInt(prompt("Enter student " + iterator + " test score."));
+				testTotal += testScore; // test total adds each test score
+				studentTotal++; // student total increases by one for each iteration
+			}
+			// test average is calculated by dividing sum of total test scores by number of tests
+			testAvg = testTotal / studentTotal
+			// total and average displayed to webpage
+			document.write("The total Scores is " + testTotal + "<br>");
+			document.write("The average test scores for the class is " + testAvg);
+		</script>
+	</body>
+</html>
